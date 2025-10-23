@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — K&S Business Solutions</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+  *{margin:0; padding:0; box-sizing:border-box; font-family:'Poppins', sans-serif;}
+  body{
+    background: linear-gradient(135deg,#6a11cb,#2575fc);
+    color:white;
+    min-height:100vh;
+    overflow-x:hidden;
+    position:relative;
+  }
+
+  /* Sparkles effect */
+  .sparkle{
+    position:absolute;
+    width:4px; height:4px;
+    background:white;
+    border-radius:50%;
+    opacity:0.8;
+    animation: sparkleAnim linear infinite;
+  }
+  @keyframes sparkleAnim{
+    0%{transform:translateY(0) scale(1);}
+    50%{transform:translateY(-20px) scale(1.5);}
+    100%{transform:translateY(0) scale(1);}
+  }
+
+  header{
+    text-align:center;
+    padding:60px 20px;
+    text-shadow:2px 2px 10px rgba(0,0,0,0.4);
+  }
+  header h1{font-size:3rem; margin-bottom:10px;}
+  header p{font-size:1.2rem;}
+
+  nav ul{
+    display:flex;
+    justify-content:center;
+    list-style:none;
+    background: rgba(255,255,255,0.1);
+    padding:15px 10px;
+    border-radius:15px;
+    backdrop-filter: blur(10px);
+    margin:20px auto;
+    width:max-content;
+  }
+  nav ul li{margin:0 20px;}
+  nav ul li a{
+    color:white;
+    text-decoration:none;
+    font-weight:600;
+    padding:8px 15px;
+    border-radius:10px;
+    transition:0.3s;
+  }
+  nav ul li a:hover{
+    background:white;
+    color:#2575fc;
+  }
+
+  section{padding:60px 20px; max-width:800px; margin:auto;}
+  h2{text-align:center; color:white; margin-bottom:30px;}
+
+  .contact-info{text-align:center; margin-bottom:40px;}
+  .contact-info p{margin:10px 0; font-size:1.1rem;}
+
+  form{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+    background: rgba(255,255,255,0.1);
+    padding:30px;
+    border-radius:15px;
+    backdrop-filter: blur(10px);
+  }
+  input, textarea{
+    padding:15px;
+    border-radius:10px;
+    border:none;
+    font-size:1rem;
+    width:100%;
+    outline:none;
+  }
+  input:focus, textarea:focus{
+    box-shadow:0 0 10px rgba(0,123,255,0.5);
+  }
+  button{
+    padding:15px;
+    border:none;
+    border-radius:10px;
+    background:#2575fc;
+    color:white;
+    font-size:1.1rem;
+    cursor:pointer;
+    transition:0.3s;
+  }
+  button:hover{
+    background:#6a11cb;
+    transform:scale(1.05);
+  }
+
+  footer{
+    background: rgba(0,0,0,0.2);
+    text-align:center;
+    color:white;
+    padding:20px 10px;
+    margin-top:50px;
+    border-radius:15px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Contact Us</h1>
+  <p>Reach out today to start growing your business with K&S Solutions</p>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="marketing.html">Marketing Strategy</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<section>
+  <h2>Our Contact Details</h2>
+  <div class="contact-info">
+    <p><strong>Email:</strong> kashifgamingcompany@gmail.com</p>
+    <p><strong>Phone:</strong> +92 311 0057369</p>
+  </div>
+
+  <h2>Send Us a Message</h2>
+  <form>
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea rows="6" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+<footer>
+  <p>© 2025 K&S Business Solutions | Founder: Kashif | Manager: Sidra</p>
+</footer>
+
+<script>
+  // Sparkles generation
+  for(let i=0;i<50;i++){
+    const sparkle = document.createElement('div');
+    sparkle.className='sparkle';
+    sparkle.style.top=Math.random()*window.innerHeight+'px';
+    sparkle.style.left=Math.random()*window.innerWidth+'px';
+    sparkle.style.width=Math.random()*4+2+'px';
+    sparkle.style.height=sparkle.style.width;
+    sparkle.style.animationDuration= (Math.random()*3+2)+'s';
+    document.body.appendChild(sparkle);
+  }
+</script>
+
+</body>
+</html>

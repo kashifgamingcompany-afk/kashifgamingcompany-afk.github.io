@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Marketing Strategy — K&S Business Solutions</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+  *{margin:0; padding:0; box-sizing:border-box; font-family:'Poppins', sans-serif;}
+  body{
+    background: linear-gradient(135deg,#6a11cb,#2575fc);
+    color:white;
+    min-height:100vh;
+    overflow-x:hidden;
+    position:relative;
+  }
+
+  /* Sparkles effect */
+  .sparkle{
+    position:absolute;
+    width:4px; height:4px;
+    background:white;
+    border-radius:50%;
+    opacity:0.8;
+    animation: sparkleAnim linear infinite;
+  }
+  @keyframes sparkleAnim{
+    0%{transform:translateY(0) scale(1);}
+    50%{transform:translateY(-20px) scale(1.5);}
+    100%{transform:translateY(0) scale(1);}
+  }
+
+  header{
+    text-align:center;
+    padding:60px 20px;
+    text-shadow:2px 2px 10px rgba(0,0,0,0.4);
+  }
+  header h1{font-size:3rem; margin-bottom:10px;}
+  header p{font-size:1.2rem;}
+
+  nav ul{
+    display:flex;
+    justify-content:center;
+    list-style:none;
+    background: rgba(255,255,255,0.1);
+    padding:15px 10px;
+    border-radius:15px;
+    backdrop-filter: blur(10px);
+    margin:20px auto;
+    width:max-content;
+  }
+  nav ul li{margin:0 20px;}
+  nav ul li a{
+    color:white;
+    text-decoration:none;
+    font-weight:600;
+    padding:8px 15px;
+    border-radius:10px;
+    transition:0.3s;
+  }
+  nav ul li a:hover{
+    background:white;
+    color:#2575fc;
+  }
+
+  section{padding:60px 20px; max-width:1000px; margin:auto;}
+  h2{text-align:center; color:white; margin-bottom:40px;}
+
+  .strategy-grid{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:30px;
+  }
+
+  .strategy-card{
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    padding:25px;
+    width:250px;
+    border-radius:15px;
+    text-align:center;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .strategy-card img{
+    width:80px;
+    height:80px;
+    margin-bottom:15px;
+  }
+  .strategy-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 8px 20px rgba(0,0,0,0.3);
+  }
+
+  .videos{
+    margin-top:50px;
+    text-align:center;
+  }
+  .videos iframe{
+    width:100%;
+    max-width:560px;
+    height:315px;
+    border-radius:15px;
+    margin:15px 0;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Marketing Strategy</h1>
+  <p>Smart strategies to grow your business online and offline</p>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="marketing.html">Marketing Strategy</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<section>
+  <h2>Our Key Strategies</h2>
+  <div class="strategy-grid">
+    <div class="strategy-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135675.png" alt="SEO">
+      <h3>Search Engine Optimization</h3>
+      <p>Boost your website visibility on Google and attract organic traffic.</p>
+    </div>
+    <div class="strategy-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/1006/1006771.png" alt="Social Media">
+      <h3>Social Media Marketing</h3>
+      <p>Engage your audience on Facebook, Instagram, LinkedIn, and more.</p>
+    </div>
+    <div class="strategy-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/1006/1006774.png" alt="Email Marketing">
+      <h3>Email Campaigns</h3>
+      <p>Reach your customers directly with personalized email campaigns.</p>
+    </div>
+    <div class="strategy-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/2099/2099073.png" alt="Ads">
+      <h3>Paid Advertising</h3>
+      <p>Targeted ads on Google, YouTube, and social media for maximum impact.</p>
+    </div>
+  </div>
+
+  <div class="videos">
+    <h2>Learn More</h2>
+    <iframe src="https://www.youtube.com/embed/2XKJZrFHCcA" title="Marketing Video" frameborder="0" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/4yQUg5K8b3Y" title="Marketing Tips" frameborder="0" allowfullscreen></iframe>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 K&S Business Solutions | Founder: Kashif | Manager: Sidra</p>
+</footer>
+
+<script>
+  // Sparkles generation
+  for(let i=0;i<50;i++){
+    const sparkle = document.createElement('div');
+    sparkle.className='sparkle';
+    sparkle.style.top=Math.random()*window.innerHeight+'px';
+    sparkle.style.left=Math.random()*window.innerWidth+'px';
+    sparkle.style.width=Math.random()*4+2+'px';
+    sparkle.style.height=sparkle.style.width;
+    sparkle.style.animationDuration= (Math.random()*3+2)+'s';
+    document.body.appendChild(sparkle);
+  }
+</script>
+
+</body>
+</html>
